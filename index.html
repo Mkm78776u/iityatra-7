@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Iframe Player</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+        .telegram-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .telegram-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #f9f7ff, #e4e9ff);
+            animation: fadeIn 0.5s ease;
+        } 
+         .telegram-box h2 {
+            margin-top: 0;
+            color: #4a3aff;
+        }
+
+        .telegram-box p {
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .telegram-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0088cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .telegram-box a:hover {
+            background-color: #0077b3;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Telegram Modal -->
+    <div class="telegram-modal" id="telegramModal">
+        <div class="close-modal" onclick="document.getElementById('telegramModal').style.display='none'">✖</div>
+        <div class="telegram-box">
+            <h2>Join Our Telegram!</h2>
+            <p>Get free study material and updates directly in our Telegram group.</p>
+            <a href="https://t.me/+NTSEAWEii9UyMzk1" target="_blank">Join Now</a>
+        </div>
+    </div>  
+    <div class="video-container">
+        <iframe src="https://www.hlsplayer.org/play?url=https%3A%2F%2Ftest-streams.mux.dev%2Fx36xhzz%2Fx36xhzz.m3u8" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
